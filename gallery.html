@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gallery | E&J Elite Property Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <div class="logo-mark">EJ</div>
+        <div class="brand-text">
+          <span>E&J Elite</span>
+          <span>Property Services</span>
+        </div>
+      </div>
+      <div class="tagline">Shiny. Precise. Elite Finish.</div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="gallery.html" class="nav-link active">Gallery</a>
+          <a href="estimate.html" class="nav-link">Estimate</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <h1 class="section-title">Gallery</h1>
+      <p class="section-subtitle">
+        Before/after transformations, waterproofing wins, and pool glow-ups across Middle Georgia.
+        Replace these placeholders with your own project photos whenever you’re ready.
+      </p>
+
+      <div class="gallery-grid">
+        <article class="gallery-item">
+          <!-- Replace project-1.jpg with your actual image file -->
+          <img src="project-1.jpg" alt="Exterior refresh project" />
+          <div class="gallery-caption">
+            Exterior refresh – fascia, trim, and pressure wash clean-up to prep for listing.
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="project-2.jpg" alt="Pool cleaning and balancing" />
+          <div class="gallery-caption">
+            Weekly pool care – deep clean, balance, and equipment check before summer guests.
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="project-3.jpg" alt="Crawl space waterproofing" />
+          <div class="gallery-caption">
+            Crawl space waterproofing – moisture control &amp; vapor barrier for a healthier home.
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="project-4.jpg" alt="Deck and railing touch ups" />
+          <div class="gallery-caption">
+            Deck &amp; railing repairs with a clean, modern finish for everyday use.
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="project-5.jpg" alt="Driveway pressure washing" />
+          <div class="gallery-caption">
+            Driveway &amp; walkway pressure wash – instant curb appeal boost.
+          </div>
+        </article>
+
+        <article class="gallery-item">
+          <img src="project-6.jpg" alt="Before and after exterior" />
+          <div class="gallery-caption">
+            Full exterior glow-up – from dull and tired to sharp and guest-ready.
+          </div>
+        </article>
+      </div>
+
+      <div class="cta-row" style="margin-top:18px;">
+        <a href="estimate.html" class="btn-primary">Love this? Start your project</a>
+        <a href="services.html" class="btn-ghost">View services</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> E&J Elite Property Services.</span>
+      <span>Forsyth, Georgia • ejelite.com</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
