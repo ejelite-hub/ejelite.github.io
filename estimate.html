@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Request an Estimate | E&J Elite Property Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <div class="logo-mark">EJ</div>
+        <div class="brand-text">
+          <span>E&J Elite</span>
+          <span>Property Services</span>
+        </div>
+      </div>
+      <div class="tagline">Shiny. Precise. Elite Finish.</div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link">Services</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="estimate.html" class="nav-link active">Estimate</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <h1 class="section-title">Request an estimate</h1>
+      <p class="section-subtitle">
+        Tell us what you’re working with, and we’ll send a clear, line-by-line estimate with
+        <strong>mid-range pricing</strong> and priorities labeled. No mystery, no surprise add-ons.
+      </p>
+
+      <article class="card">
+        <h3>Estimate request form</h3>
+        <p>
+          This form opens your email with your details auto-filled. If you’d rather, you can
+          email us directly at <strong>PROFIX3000@outlook.com</strong>.
+        </p>
+
+        <form
+          action="mailto:PROFIX3000@outlook.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" name="Name" type="text" required />
+            </div>
+
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="Phone" type="tel" required />
+            </div>
+
+            <div class="form-grid-full">
+              <label for="email">Email</label>
+              <input id="email" name="Email" type="email" required />
+            </div>
+
+            <div class="form-grid-full">
+              <label for="address">Service Address</label>
+              <input id="address" name="Service Address" type="text" placeholder="Street, City, ZIP" />
+            </div>
+
+            <div class="form-grid-full">
+              <label for="service-type">Main Service Needed</label>
+              <select id="service-type" name="Service Type">
+                <option value="Property Services">Property Services</option>
+                <option value="Pool & Spa">Pool &amp; Spa</option>
+                <option value="Waterproofing / Crawl Space">Waterproofing / Crawl Space</option>
+                <option value="Multiple / Not Sure">Multiple / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-grid-full">
+              <label for="priorities">Top 3 Priorities</label>
+              <textarea
+                id="priorities"
+                name="Top Priorities"
+                placeholder="Example: 1) Stop water intrusion, 2) Clean up exterior, 3) Make pool guest-ready."
+              ></textarea>
+            </div>
+
+            <div class="form-grid-full">
+              <label for="timeline">Timeline &amp; Budget Notes</label>
+              <textarea
+                id="timeline"
+                name="Timeline & Budget"
+                placeholder="Share any timing (ASAP / next 30–60 days) and budget comfort zone."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="cta-row" style="margin-top:14px;">
+            <button type="submit" class="btn-primary">Send details</button>
+            <button type="reset" class="btn-ghost" style="border-style:dashed;">Clear form</button>
+          </div>
+        </form>
+
+        <p style="font-size:11px;opacity:0.7;margin-top:10px;">
+          Heads up: Some browsers and email setups handle mailto forms differently. If it doesn’t open
+          correctly, just copy your answers and email them to <strong>PROFIX3000@outlook.com</strong>.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> E&J Elite Property Services.</span>
+      <span>Forsyth, Georgia • ejelite.com</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
