@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services | E&J Elite Property Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <div class="logo-mark">EJ</div>
+        <div class="brand-text">
+          <span>E&J Elite</span>
+          <span>Property Services</span>
+        </div>
+      </div>
+      <div class="tagline">Shiny. Precise. Elite Finish.</div>
+      <nav>
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="services.html" class="nav-link active">Services</a>
+          <a href="gallery.html" class="nav-link">Gallery</a>
+          <a href="estimate.html" class="nav-link">Estimate</a>
+          <a href="about.html" class="nav-link">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <section>
+      <h1 class="section-title">Services</h1>
+      <p class="section-subtitle">
+        Priority-based, itemized work—so you know what must be done now and what can wait.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Property Services</h3>
+          <p>For owners who want their property tight, clean, and ready for guests or resale.</p>
+          <ul>
+            <li>Exterior repairs &amp; punch-list completion</li>
+            <li>Deck, railing, and stair touch-ups</li>
+            <li>Trim, caulking, and paint corrections</li>
+            <li>Pressure washing: siding, driveways, walks</li>
+            <li>Minor drywall &amp; cosmetic interior fixes</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Pool &amp; Spa Care</h3>
+          <p>Routine care plus troubleshooting, so your pool feels like a retreat, not a project.</p>
+          <ul>
+            <li>Scheduled cleaning &amp; skimming</li>
+            <li>Water testing &amp; chemical balancing</li>
+            <li>Filter &amp; pump checks</li>
+            <li>Minor equipment repairs or swap-outs</li>
+            <li>Seasonal openings &amp; winterization</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Crawl Space &amp; Waterproofing</h3>
+          <p>We start with what protects your structure and air quality long-term.</p>
+          <ul>
+            <li>Crawl space waterproofing</li>
+            <li>Vapor barriers &amp; moisture control</li>
+            <li>Drainage improvements &amp; sump options</li>
+            <li>Insulation repairs in critical areas</li>
+            <li>Safety-first recommendations by priority</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2 class="section-title">How we build your scope</h2>
+      <p class="section-subtitle">
+        Every project gets a simple, readable estimate broken into <strong>Priority 1</strong>, 
+        <strong>Priority 2</strong>, and <strong>Nice-to-Have</strong> items. That way you can phase work
+        around real life.
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Priority 1 – Protect</h3>
+          <p>Anything that affects water, safety, or structural integrity.</p>
+          <ul>
+            <li>Active leaks &amp; water intrusions</li>
+            <li>Crawl space moisture issues</li>
+            <li>Hazardous trip, fall, or code concerns</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Priority 2 – Preserve</h3>
+          <p>Items that prevent future damage and improve longevity.</p>
+          <ul>
+            <li>Weatherproofing &amp; sealing</li>
+            <li>Preventative repairs &amp; reinforcements</li>
+            <li>Pool equipment maintenance</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Priority 3 – Polish</h3>
+          <p>All the “looks amazing” finishing touches—your curb appeal and guest wow.</p>
+          <ul>
+            <li>Cosmetic paint &amp; touch-ups</li>
+            <li>Detailed cleaning &amp; pressure wash glow-ups</li>
+            <li>Small upgrades that visually elevate the space</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="cta-row" style="margin-top:16px;">
+        <a href="estimate.html" class="btn-primary">Start your estimate</a>
+        <a href="gallery.html" class="btn-ghost">See finished work</a>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> E&J Elite Property Services.</span>
+      <span>Forsyth, Georgia • ejelite.com</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
