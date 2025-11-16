@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>E&J Elite Property Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    body {
+      background: radial-gradient(circle at top left, #333 0, #000 40%, #000 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .shell {
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(0,0,0,0.8);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+      padding: 32px 24px 40px;
+      backdrop-filter: blur(18px);
+    }
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 32px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .logo-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      border: 2px solid #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .brand-text span:first-child {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .brand-text span:last-child {
+      font-size: 12px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      letter-spacing: 0.2em;
+    }
+    .tagline {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.75;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+    .hero h1 {
+      font-size: clamp(28px, 4vw, 40px);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .hero p {
+      font-size: 15px;
+      opacity: 0.85;
+      max-width: 480px;
+      margin-bottom: 18px;
+    }
+    .hero-highlight {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.8;
+      margin-bottom: 18px;
+    }
+    .hero-highlight::before {
+      content: "";
+      width: 32px;
+      height: 1px;
+      background: #fff;
+      opacity: 0.6;
+    }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .btn-primary {
+      border-radius: 999px;
+      border: 1px solid #fff;
+      background: #fff;
+      color: #000;
+      font-size: 14px;
+      padding: 10px 22px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .btn-ghost {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.3);
+      background: transparent;
+      color: #fff;
+      font-size: 13px;
+      padding: 9px 18px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      opacity: 0.85;
+    }
+    .small-note {
+      font-size: 11px;
+      opacity: 0.7;
+    }
+    .hero-card {
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 18px 16px;
+      background: radial-gradient(circle at top, rgba(255,255,255,0.15), rgba(0,0,0,0.9));
+      display: grid;
+      gap: 10px;
+      font-size: 13px;
+    }
+    .hero-card h2 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      opacity: 0.9;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pill {
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.24);
+      padding: 6px 12px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      opacity: 0.9;
+    }
+    .divider {
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(255,255,255,0.3), transparent);
+      margin: 24px 0;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+    .card {
+      border-radius: 18px;
+      border: 1px solid rgba(255,255,255,0.16);
+      padding: 16px 14px 18px;
+      background: rgba(8,8,8,0.9);
+      font-size: 13px;
+    }
+    .card h3 {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 6px;
+    }
+    .card p {
+      opacity: 0.8;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .card ul {
+      list-style: none;
+      font-size: 12px;
+      opacity: 0.82;
+    }
+    .card ul li::before {
+      content: "• ";
+      opacity: 0.9;
+    }
+    .contact-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      padding-top: 8px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+      opacity: 0.85;
+    }
+    .contact-left span {
+      display: block;
+    }
+    .contact-left strong {
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+    .contact-right {
+      text-align: right;
+      font-size: 12px;
+    }
+    .qr-box {
+      border-radius: 12px;
+      border: 1px dashed rgba(255,255,255,0.3);
+      padding: 6px 10px;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.8;
+    }
+    footer {
+      margin-top: 24px;
+      font-size: 11px;
+      opacity: 0.6;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    @media (max-width: 768px) {
+      .shell { padding: 22px 18px 28px; }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-3 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .contact-strip {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .contact-right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div class="brand">
+        <div class="logo-mark">EJ</div>
+        <div class="brand-text">
+          <span>E&J Elite</span>
+          <span>Property Services</span>
+        </div>
+      </div>
+      <div class="tagline">Shiny. Precise. Elite Finish.</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="hero-highlight">Middle Georgia • Residential & Small Commercial</div>
+        <h1>Premium exterior upgrades, without the contractor chaos.</h1>
+        <p>
+          E&J Elite Property Services specializes in elevated repairs and enhancements—
+          from pool &amp; spa care to waterproofed crawl spaces and clean, modern finishes
+          that actually last.
+        </p>
+        <div class="cta-row">
+          <a href="#estimate" class="btn-primary">Request an Estimate</a>
+          <a href="#services" class="btn-ghost">View Services</a>
+        </div>
+        <p class="small-note">Serving Forsyth &amp; surrounding Middle GA areas.</p>
+      </div>
+      <aside class="hero-card">
+        <h2>Project Snapshot</h2>
+        <p>
+          Need a clear, itemized estimate for your property at 133 Indian Springs Rd or
+          another address? We prioritize safety, waterproofing, and long-term value first.
+        </p>
+        <div class="pill-row">
+          <span class="pill">Itemized Scope</span>
+          <span class="pill">Priority-Based Phasing</span>
+          <span class="pill">Mid-Range Pricing</span>
+        </div>
+      </aside>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="services" class="grid-3">
+      <article class="card">
+        <h3>Property Services</h3>
+        <p>Smart repairs and upgrades that keep your home safe, dry, and guest-ready.</p>
+        <ul>
+          <li>Exterior repairs &amp; punch-list items</li>
+          <li>Pressure washing &amp; clean-ups</li>
+          <li>Minor carpentry &amp; cosmetic fixes</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Pool &amp; Spa</h3>
+        <p>Clean, balanced, and beautiful—so your pool feels like a retreat, not a chore.</p>
+        <ul>
+          <li>Routine cleaning &amp; water balancing</li>
+          <li>Equipment checks &amp; minor repairs</li>
+          <li>Seasonal openings &amp; closings</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Waterproofing</h3>
+        <p>Protect your investment from the ground up with dry, healthy crawl spaces.</p>
+        <ul>
+          <li>Crawl space waterproofing</li>
+          <li>Moisture control solutions</li>
+          <li>Priority safety recommendations</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="estimate" class="card">
+      <h3>Request your itemized estimate</h3>
+      <p>
+        Tell us your address, priorities, and timeline. We’ll send a clear,
+        line-by-line estimate with mid-range pricing so you can phase the work
+        however you need.
+      </p>
+      <p style="font-size: 12px; opacity: 0.8; margin-top: 8px;">
+        Email: <strong>PROFIX3000@outlook.com</strong><br />
+        Phone (Erick): <strong>XXX-XXX-XXXX</strong><br />
+        Phone (Jenny): <strong>762-210-7058</strong>
+      </p>
+    </section>
+
+    <section class="contact-strip">
+      <div class="contact-left">
+        <strong>Call or text to start:</strong>
+        <span>Erick – Co-Founder &amp; Lead Engineer</span>
+        <span>Jenny – Co-Founder &amp; Lead Consultant</span>
+      </div>
+      <div class="contact-right">
+        <div class="qr-box">
+          QR CODE GOES HERE
+        </div>
+        <div style="margin-top: 4px;">
+          Scan to save our contact card<br />
+          &amp; request your estimate.
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <span>© <span id="year"></span> E&J Elite Property Services. All rights reserved.</span>
+      <span>Forsyth, Georgia &nbsp;•&nbsp; ejelite.com</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
